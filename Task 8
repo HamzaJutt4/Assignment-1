@@ -1,0 +1,21 @@
+public class prob8 {
+    public static void main(String[] args) {
+        int totalPopulation = 80000;
+        double percentageMen = 52;
+        double percentageLiterateTotal = 48;
+        double percentageLiterateMen = 35;
+
+        int totalMen = (int)(totalPopulation * percentageMen / 100);
+        int totalWomen = totalPopulation - totalMen;
+
+        int literateMen = (int)(totalPopulation * percentageLiterateMen / 100);
+        int literateTotal = (int)(totalPopulation * percentageLiterateTotal / 100);
+
+        int literateWomen = literateTotal - literateMen;
+        int illiterateMen = totalMen - literateMen;
+        int illiterateWomen = totalWomen - literateWomen;
+
+        System.out.println("Total number of illiterate men: " + illiterateMen);
+        System.out.println("Total number of illiterate women: " + illiterateWomen);
+    }
+}
