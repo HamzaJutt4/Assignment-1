@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class prob10 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the total selling price of 15 items: ");
+        double totalSellingPrice = scanner.nextDouble();
+
+        System.out.print("Enter the total profit percentage earned on them: ");
+        double profitPercentage = scanner.nextDouble();
+
+        // Calculate the total cost price
+        double totalProfit = (profitPercentage / 100) * totalSellingPrice;
+        double totalCostPrice = totalSellingPrice - totalProfit;
+
+        // Calculate the cost price of one item
+        double costPricePerItem = totalCostPrice / 15;
+
+        System.out.println("The cost price of one item is: " + costPricePerItem);
+    }
+}
